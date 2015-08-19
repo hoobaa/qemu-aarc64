@@ -12,5 +12,6 @@ qemu-system-aarch64 \
     -drive if=none,file=./qcow2.img,id=hd0 \
     -device virtio-blk-device,drive=hd0 \
     -device virtio-net-device,vlan=0,id=net0,mac=52:54:00:09:a4:37 \
-    -net user,vlan=0,name=hostnet0
+    -net user,vlan=0,name=hostnet0 \
+    -redir tcp:40022::22
 # -curses  \
